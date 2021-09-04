@@ -1,0 +1,70 @@
+
+.adminPage_div {
+    background-color: #ffffff;
+    height: 650px;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.adminPage-Top-Header {
+    height: 70px;
+    width: 75%;
+    /* border: 1px solid black; */
+    float: right;
+}
+
+.top-header-logout {
+    height: 70px;
+   /*  border: 1px solid black;  */
+    width: 100%;
+    float: right;
+    overflow: auto;
+}
+
+.left-header {
+    background-color: #b5ecff;
+    height: 650px;
+    width: 25%;
+    float: left;
+    overflow: auto;
+}
+
+.left-header h1 {
+    text-align: center;
+}
+
+/** Admin Body Page **/
+
+.admin-Body-Page {
+    height: 580px;
+    width: 75%;
+    border: 0px solid black;
+    float: left;
+}
+
+.three-div {
+    /* border: 1px solid rgb(78, 56, 175); */
+    border-radius: 9px;
+    height: 350px;
+    width: 25%;
+    margin: 55px 30px;
+    float: left;
+}
+
+.logo-div {
+    height: 250px;
+    width: 100%;
+  /**  border: 1px solid black; **/
+    overflow: auto;
+}
+
+
+.option-title {
+    height: auto;
+    width: 100%;
+  /**  border: 1px solid green;  **/
+}
+
+.option-title h3 {
+    text-align: center;
+}

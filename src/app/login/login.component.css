@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+.btn {
+    padding: 7px;
+}
+
+.btn-success {
+    background-color: #196eff;
+}
+
+.main_body {
+    max-width: 100%;
+    overflow: hidden;
+    height: auto;
+}
+
+.main_body img {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+}
+
+.login_divNi {
+    background-color: #d4fdff;
+    opacity: 0.92;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 85px;
+    height: 480px;
+    width: 55%;
+    border: 4px solid #81e9f7;
+    border-radius: 7px;
+}
+
+.login_divNi_header {
+    
+    height: 75px;
+  
+}
+
+.login_divNi_header h3 {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.login_form {
+    margin: 0 auto;
+    height: 340px;
+    width: 70%;
+    background-color: #ffffff;
+    overflow: auto;
+
+}

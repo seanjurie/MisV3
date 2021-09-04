@@ -1,0 +1,21 @@
+<div class="form-froup row">
+
+    
+    <div class="col-sm-12">
+        <input type="text" class="form-control" [(ngModel)]="emailName" placeholder="Enter Name">
+        <input type="text" class="form-control" [(ngModel)]="emailem" placeholder="Enter Email">
+        <input id="password" type="text" class="form-control" [(ngModel)]="emailPass" placeholder="Enter Password" [value]="email_ni.emailPass">
+        <!-- <button onclick="generatePassword()" class="btn btn-primary" style="width:45%; margin-top: 5px;">
+            Generate Password
+        </button> -->
+        <input type="text" class="form-control" [(ngModel)]="department" placeholder="Enter Department">
+        <input type="text" class="form-control" [(ngModel)]="branch" placeholder="Enter Branch">
+    </div>
+    
+<button (click)="addEmail()" *ngIf="email_ni.emailId==0" class="btn btn-success" style="margin: 12px 0px 0px 14px;">
+    Add
+</button>
+
+<button (click)="updateEmail()" *ngIf="email_ni.emailId!=0" class="btn btn-primary" style="margin: 12px 0px 0px 14px;">
+    Update
+</button> 

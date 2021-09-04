@@ -1,0 +1,72 @@
+
+.employees-div {
+    height: auto;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.left-header-menu {
+ /*   border: 1px solid red;  */
+    background-color: white;
+    height: 650px;
+    width: 15%;
+    float: left;
+    overflow: hidden;
+}
+
+.left-header-menu img {
+    width: 15%;
+    height: 525px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.left-menu-title h2 {
+    padding: 12px 43px;
+    position: fixed;
+    color: white;
+}
+
+.logout-div {
+    float: right;
+    border: 1px solid red;
+    height: auto;
+    width: 85%;
+}
+
+.logout-div-inner {
+    float: right;
+    height: 50px;
+    width: 11%;
+    padding-top: 6px;
+}
+
+.left-menu-list {
+    height: auto;
+    margin-top: 120px;
+    position: fixed;
+  /*  background-color: red;  */
+}
+
+.left-menu-list ul{
+   list-style-type: none;
+   padding-left: 30px;
+}
+
+.left-menu-list li {
+    padding-top: 15px;
+}
+
+.left-menu-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+}
+
+.employees-body {
+    height: auto;
+    overflow: auto;
+    width: 85%;
+    border: 2px solid rgb(28, 0, 128);  
+    float: left;
+}

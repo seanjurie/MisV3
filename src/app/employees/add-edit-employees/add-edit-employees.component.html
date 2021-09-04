@@ -1,0 +1,19 @@
+<div class="form-froup row">
+    
+    <div class="col-sm-12">
+        <input type="text" class="form-control" [(ngModel)]="employeeName"  placeholder="Enter Name">
+        <input type="text" class="form-control" [(ngModel)]="employeeDomain" placeholder="Enter Domain">
+        <input type="text" class="form-control" [(ngModel)]="domainPassword" placeholder="Enter Domain Pass">
+        <input type="text" class="form-control" [(ngModel)]="employeeDep" placeholder="Enter Department">
+        <input type="text" class="form-control" [(ngModel)]="employeeIP" placeholder="Enter IP">
+        <input type="text" class="form-control" [(ngModel)]="employeePassword" placeholder="Enter Local Pass">
+    </div>
+</div>
+
+<button (click)="addEmp()" *ngIf="employees_ni.employeeId==0" class="btn btn-success" style="margin-top: 12px;">
+    Add
+</button>
+
+<button (click)="updateEmp()" *ngIf="employees_ni.employeeId!=0" class="btn btn-primary" style="margin: 3px;">
+    Update
+</button>

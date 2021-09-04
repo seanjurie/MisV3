@@ -1,0 +1,146 @@
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+        (click)="closeClick()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-email [email_ni]="email_ni" *ngIf="ActivateAddEditEmailComp"></app-add-edit-email>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="email-div">
+
+  <div class="left-header-menu">
+    <img src="assets/pictures/vertical-pic.jpg">
+      <div class="left-menu-title">
+          <h1>EMAIL</h1>
+      </div>
+
+      <div class="left-menu-list">
+        <ul>
+          <li>
+            <a routerLink="/emails">
+              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+              </svg>
+              EMAIL
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/employees">
+              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+              </svg>
+              CHBC USER
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/admins">
+              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+              ADMIN
+            </a>
+          </li>
+        </ul>
+
+      </div>
+  </div>
+
+
+
+  <div class="email-body">
+    <div style="height: auto;">
+         <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" 
+                  data-toggle="modal" data-target="#exampleModal"
+                  (click)="addClick()" onclick="getPassword();" style="margin: 15px;"
+                  data-backdrop="static" data-keyboard="false"
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+          </svg>
+                ADD EMAIL
+          </button>
+          <button (click)="onLogout()" class="float-right btn btn-danger"
+                  style="margin: 15px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+              <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+              </svg>                                     
+                Logout
+          </button>
+    </div>
+
+      <table id="dat-Table" class="table table-striped row-border">
+        <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Department</th>
+              <th>Branch</th>
+              <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let EmailItem of EmailList">
+            <td>{{EmailItem.emailName}}</td>
+            <td>
+              <a style="font-size: 15px;" href="https://webmail1.networksolutionsemail.com/" target="_blank">
+                  {{EmailItem.emailem}}
+              </a>
+            </td>
+            <td>{{EmailItem.emailPass}}</td>
+            <td>{{EmailItem.department}}</td>
+            <td>{{EmailItem.branch}}</td>
+            <td>
+              <!-- Edit -->
+              <button type="button" class="btn btn-outline-info" 
+                      data-toggle="modal" data-target="#exampleModal" 
+                      (click)="editClick(EmailItem)"
+              >
+
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                      <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg>
+
+              </button>
+              <!-- Delete -->
+              <button class="btn btn-outline-danger" 
+                      (click)="deleteClick(EmailItem)"
+                      style="margin-top: 3px;"
+              >
+
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                </svg>
+
+              </button>
+            </td>
+          </tr>
+        </tbody>
+    
+    </table>
+  </div>
+
+</div>
+

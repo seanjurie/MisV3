@@ -1,0 +1,51 @@
+<div class="adminPage_div">
+    <div class="adminPage-Top-Header">
+        <!-- <h4>Hello</h4> -->
+        <div class="top-header-logout" *ngIf="userDetails">
+            <button class="btn btn-danger" (click)="onLogout()" style="float: right; margin-right: 38px; margin-top: 15px;">        
+
+            LOGOUT
+
+        </button>
+        <h4 style="padding: 15px 0 0 40px;">Hello Admin {{userDetails.fullName}}</h4>
+        </div>
+    </div>
+    <div class="left-header">
+        <h1 style="padding-top: 200px;">Welcome To Admin Portal</h1>
+    </div>
+
+    <!-- Admin Body -->
+    <div class="admin-Body-Page">
+
+        <div class="three-div">
+            <div class="logo-div">
+                <img routerLink="/emails" src="/assets/pictures/email.jpg" 
+                     style="height: 235px; padding-left: 8px; cursor: pointer;">
+            </div>
+            <div class="option-title">
+                <h3 routerLink="/emails" style="cursor: pointer;">Emails</h3>
+            </div>
+        </div>
+
+        <div class="three-div">
+            <div class="logo-div">
+                <img routerLink="/employees" src="/assets/pictures/user.jpg" 
+                    style="height: 240px; padding-left: 7px; cursor: pointer;">
+            </div>
+            <div class="option-title">
+                <h3 routerLink="/employees" style="cursor: pointer;">CHBC Users</h3>
+            </div>
+        </div>
+
+        <div class="three-div">
+            <div class="logo-div">
+                <img routerLink="/admins" src="/assets/pictures/admin.jpg" 
+                    style="height: 240px; padding-left: 7px; cursor: pointer;">
+            </div>
+            <div class="option-title">
+                <h3 routerLink="/admins" style="cursor: pointer;">Admin</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
